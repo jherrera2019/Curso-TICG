@@ -8,7 +8,7 @@ Objetivos del análisis de datos:
 
 - Determinar si existe expresión diferencial entre genotipos.
 - Determinar si existe expresión diferencial entre tratamientos.
-- Evaluar las diferencias en la respuesta al tratamiento entre los dos genotipos
+- Evaluar las diferencias en la respuesta al tratamiento entre los dos genotipos (es lo mismo que decir que existe interacción)
 
 En uno de los pasos que involucra la lectura de datos en bruto, se observa que donde no todas las sondas muestran la misma calidad al ser alineadas con el genoma dado por el genoma de referencia utilizado.
 
@@ -23,3 +23,6 @@ table(annot$ProbeQuality)
 Por lo tanto se agruparon las sondas "Bad" con "No match" y lo demás como "Good probes".
 
 ```probe_qc <- ifelse(annot$ProbeQuality %in% c("Bad", "No match"), "Bad probes","Good probes")```
+
+Respecto al control de calidad, se crearon gráficos de caja coloreados por calidad de la sonda y calidad por tratamiento. En el eje X se observa la posición de las matrices desde la A a H
+Y logaritmo en base 2 de la intensidad para cada muestra. estan divididos por anotación= malas y buenas dado por un paquete de biocontactor. 
