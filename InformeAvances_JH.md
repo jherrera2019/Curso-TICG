@@ -26,3 +26,9 @@ Por lo tanto se agruparon las sondas "Bad" con "No match" y lo demás como "Good
 
 Respecto al control de calidad, se crearon gráficos de caja coloreados por calidad de la sonda y calidad por tratamiento. En el eje X se observa la posición de las matrices desde la A a H
 Y logaritmo en base 2 de la intensidad para cada muestra. estan divididos por anotación= malas y buenas dado por un paquete de biocontactor. 
+mala calidad tienen menor intensidad, calidad lo det por secuencia. mapean secuencia contra el genoma de referencia --> malas mapean una vez o nunca o multipes veces en el genoma. 
+
+Matriz de diseño asocia información a las muestras, a los array, aca fila es un array, y tiene el nombre de la muestra el serial del bead chip.
+
+-estableceremos contrastes entre grupos: estos son geno, trt, etc.
+en la matriz de contrastes, 2 vectores se multiplicaron por 5; aquí voy a calcular constrastes entre el promedio de estos 2 grupos (B.C y B.I) (tienen en común el genotipo b ) y el promedio de los otros 2 (BY.C y BY.I). --> por lo que el contraste es la expresión promedio del grupo B menos la expresión promedio del grupo BY. Así, que si en un gen la expresión promedio del grupo B es > a la del BY va a tener un FC posiivo  
