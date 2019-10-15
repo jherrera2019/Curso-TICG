@@ -12,8 +12,10 @@ Objetivos del análisis de datos:
 
 En uno de los pasos que involucra la lectura de datos en bruto, se observa que donde no todas las sondas muestran la misma calidad al ser alineadas con el genoma dado por el genoma de referencia utilizado.
 
-```annot <- read.delim("MouseRef-8_annot.txt") #se creó un objeto que contiene el genoma de referencia.
-table(annot$ProbeQuality)```
+```
+annot <- read.delim("MouseRef-8_annot.txt") #se creó un objeto que contiene el genoma de referencia.
+table(annot$ProbeQuality)
+```
 
         Bad        Good    Good****    No match     Perfect  Perfect*** Perfect**** 
         289          60          15           5        4468          53         110 
