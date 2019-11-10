@@ -28,7 +28,7 @@ Por lo tanto se agruparon las sondas "Bad" con "No match" y lo demás como "Good
 
 Se crearon gráficos de caja coloreados por calidad de la sonda y calidad por tratamiento. 
 
-![A.png]
+![A](A.png)
 
 **Figura A**. Diagramas de caja de datos sin procesar en escala log por microarreglo y calidad de sonda. 
 
