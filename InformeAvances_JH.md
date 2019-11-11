@@ -45,3 +45,7 @@ Dado que el estudio utilizó un diseño factorial, esposible hacer variaas pregu
 Los contrastes son vectores de coeficientes que cuando se multiplican con un vector de promedios por grupo experimental, crean contrastes que pueden evaluarse estadísticamente.
 
 Se probó cada contraste utilizando 200 permutaciones, aplicando pruebas de F, utilizando una estimación de varianza residual por sonda (F1) y una estimación basada en contracción de varianza residual que utiliza información de múltiples sondas (Fs) 
+
+## Contar genes expresados diferencialmente.
+
+En este experimento se buscaba resolver las preguntas ¿existe un efecto de interacción entre el genotipo y el tratamiento sobre la expresión génica en los cardiomiocitos? además de evaluar la naturaleza de la interacción. ¿Ambos genotipos responden al tratamiento pero en direcciones opuestas? ¿O el tratamiento tiene un efecto en uno de los genotipos y no en el otro? 
