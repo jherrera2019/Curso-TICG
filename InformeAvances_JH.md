@@ -9,7 +9,11 @@ Santiago, 16.12.2019
 ---------------------------------------------
 # Introducción
 
-El concepto de expresión diferencial hace alusión al cambio en la expresión de genes que es explicado por, ya sea, factores ambientales-experimentales o genéticos, o dada la interación de ambos factores, o sea cuando hay expresión diferencial, es que hubo interacción genético ambiental, permitiendo entender la variación fenotípica que pueda tener el modelo de estudio. Gracias a las aplicaciones bioinformáticas, es que podemos estudiar los cambios de expresión, permitiéndonos clasificar los genes en vías de señalización particulares y por lo tanto entregarnos un panorama de los proocesos que se vean alterados bajo los distintos escenarios experimentales a los que estén inmersos nuestro modelo de estudio.
+El concepto de expresión diferencial hace alusión al cambio en la expresión de genes que es explicado por, ya sea, factores ambientales-experimentales o genéticos, o dada la interación de ambos factores, o sea cuando hay expresión diferencial, es que hubo interacción genético ambiental (figura 1), permitiendo entender la variación fenotípica que pueda tener el modelo de estudio. Gracias a las aplicaciones bioinformáticas, es que podemos estudiar los cambios de expresión, permitiéndonos clasificar los genes en vías de señalización particulares y por lo tanto entregarnos un panorama de los proocesos que se vean alterados bajo los distintos escenarios experimentales a los que estén inmersos nuestro modelo de estudio.
+
+![1](Expresión+diferencial+de+genes+frente+a+dos+tratamientos.jpg)
+
+**Figura 1**. Esquema representativo de expresión diferencial.
 
 Para este módulo se ha realizado el tutorial de **[Expresión Diferencial](https://github.com/AliciaMstt/BioinfinvRepro/blob/master/Unidad7/Tutorial_de_expresion_diferencial_en_R.md)** del Módulo 7 el cual tenía por objetivo introducir técnicas de el análisis de datos de microarreglos para detectar genes diferencialmente expresados producto de factores experimentales o de sus interacciones. Se generaron figuras para describir control de calidad de las sondas y para describir el análsis de expresión diferencial mismo. El análisis ha sido ejecutado en el servidor remoto de la universidad bajo el lenguaje de programación UNIX y R.  
 
@@ -17,6 +21,10 @@ Para este módulo se ha realizado el tutorial de **[Expresión Diferencial](http
 # Desarrollo
 
 En el estudio se perfilaron ocho ratones machos adultos de dos cepas, C57BL/6J y C57BL/6J-chrY<A/J/NaJ> , denominadas B y BY respectivamente. De cada cepa (genotipo), cuatro animales fueron castrados (C) y cuatro animales quedaron intactos (I) a modo control. El ARN se hibridizó a BeadChips Illumina MouseRef-8 v2.0 que contienen ocho microarreglos con 25,697 sondas cada uno. Sólo se seleccionaron arbitrariamente 5000 sondas para este tutorial.
+
+![2](Figura1_Diseno_de_hibridizaciones.png)
+
+**Figura 2**. Diseño experimental de las hibridaciones de muestras por chip y dentro de chip. Los colores representan el genotipo (azul = C57BL/6J (B); verde = C57BL/6J-chrY<A/J/NaJ> (BY) y tratamiento de castración (amarillo = intacto (I); rojo = castrado (C)).
 
 Objetivos del análisis de datos:
 
@@ -46,15 +54,15 @@ Se crearon gráficos de caja coloreados por calidad de la sonda y calidad por tr
 
 ![A](A.png)
 
-**Figura 1**. Diagramas de caja de datos sin procesar en escala log por microarreglo y calidad de sonda. 
+**Figura 3**. Diagramas de caja de datos sin procesar en escala log por microarreglo y calidad de sonda. 
 
-En la figura A tenemos en el eje X las sondas divididas por calidad para cada array, en donde las de mala calidad tienen menor intensidad (rojo).
+En la figura 3 tenemos en el eje X las sondas divididas por calidad para cada array, en donde las de mala calidad tienen menor intensidad (rojo).
 
 ![B](B.png)
 
-**FIgura 2**. Diagramas de caja de datos en bruto por microarreglo.
+**FIgura 4**. Diagramas de caja de datos en bruto por microarreglo.
 
-En la figura B tenemos en el eje X, la posición de las matrices Illumina desde la A a H, mientras que en el eje Y el logaritmo en base 2 de la intensidad.  Las cajas están coloreadas según tratamiento. Se puede observar que hay una leve tendencia a mayores valores de intensidad en posiciones de castrados.
+En la figura 4 tenemos en el eje X, la posición de las matrices Illumina desde la A a H, mientras que en el eje Y el logaritmo en base 2 de la intensidad.  Las cajas están coloreadas según tratamiento. Se puede observar que hay una leve tendencia a mayores valores de intensidad en posiciones de castrados.
 
 ## Pruebas de expresión diferencial
 
@@ -124,19 +132,19 @@ attr(,"class")
 [1] "VennCounts"
 
 ```
-En la figura 3 se puede observar que hubo expresión diferencial de genes en las células del tejido cardiaco de los ratones de genotipos B y BY, y los ratones castrados y sin castrar. En donde la interacción describió un perfil de 96 genes expresados diferencialmente.  
+En la figura 5 se puede observar que hubo expresión diferencial de genes en las células del tejido cardiaco de los ratones de genotipos B y BY, y los ratones castrados y sin castrar. En donde la interacción describió un perfil de 96 genes expresados diferencialmente.  
 
-![3](vennDiagram_DiffExprs.png)
+![5](vennDiagram_DiffExprs.png)
 
-Figura 3. Genes Diferencialemente expresados (DE) por efectos marginales y de interacción.
+**Figura 5**. Genes Diferencialemente expresados (DE) por efectos marginales y de interacción.
 
-Ahora si revisamos los genes DE por efectos de interacción, divididos por tratamiento y genotipo (Fig. 4), se observa que hay una mayor cantidad de genes (60) que responden a la castración independientemente el genotipo del ratón. Mientras que una mayor cantidad de genes que se expresan diferencialmente (63) en el genotipo BY, en respuesta al tratamiento. 
+Ahora si revisamos los genes DE por efectos de interacción, divididos por tratamiento y genotipo (Fig. 6), se observa que hay una mayor cantidad de genes (60) que responden a la castración independientemente el genotipo del ratón. Mientras que una mayor cantidad de genes que se expresan diferencialmente (63) en el genotipo BY, en respuesta al tratamiento. 
 
 Estos perfiles tienen una tendencia similar a las reportadas por Lamas et al. (2009),  destacando igualmente que este análisis fue una muestra de 5000 sondas utilizadas por microarreglo y un FDR de 0.2.  
 
-![4](vennDiagram_Int.png)
+![6](vennDiagram_Int.png)
 
-Figura 4. Genes DE por efectos de interacción, divididos por tratamiento (izquierda) y genotipo (derecha).
+**Figura 6**. Genes DE por efectos de interacción, divididos por tratamiento (izquierda) y genotipo (derecha).
 
 # Pruebas funcionales
 
@@ -200,7 +208,11 @@ Probaremos si existe enriquecimiento de términos GO utilizando una prueba exact
 
 Este output nos indica que las vías metabólicas enrriquecidas más relevantes son la neurogénesis, regulación de la fosforilación, proceso cofactor metabólico, regulación postiva de modificaciones postraduccionales y generación de neuronas. El perfil de enrriquecimento nos orienta a poner foco al estudio de procesos neuronales.
 
-Llamas et al. (2009) reportaron un aumento en el tamaño de los cardiomiocitos en ratones machos adultos de genotipo B comparado con BY como resultado de la ausencia de los efectos hipertróficos de la testoterona post-pubertal tras la castración en células de la cepa BY. Sin embargo, al hacer el perfil genético encontraron que la falta de efecto hipertrófico no podía ser explicada en base a una insensibilidad de las células de BY a los andrógenos, puesto que, al igual que en nuestro análisis, el efecto de la castración (disminución de los niveles de testosterona) afectó la expresión de más genes en los cardiomiocitos de la cepa BY que en la cepa B, lo que indica que sÍ hay una respuesta frente al estímulo testosterona. 
+Llamas et al. (2009) reportaron un aumento en el tamaño de los cardiomiocitos en ratones machos adultos de genotipo B comparado con BY como resultado de la ausencia de los efectos hipertróficos de la testoterona post-pubertal tras la castración en células de la cepa BY. Sin embargo, al hacer el perfil genético encontraron que la falta de efecto hipertrófico no podía ser explicada en base a una insensibilidad de las células de BY a los andrógenos, puesto que, al igual que en nuestro análisis, el efecto de la castración (disminución de los niveles de testosterona) afectó la expresión de más genes en los cardiomiocitos de la cepa BY que en la cepa B, lo que indica que sÍ hay una respuesta frente al estímulo testosterona.
+
+![3](Imagen_discu.png)
+
+**Figura 7**. Efecto de la castración en la expresión y fenotipo de los cardiomiocitos en ratas adultas.
 
 Estos hallazgos proponen posibles mecanismos que expliquen cómo el cromosoma Y puede, a través de la interacción con eventos reguladores de andrógenos, estar relacionado con el fenotipo de las células cardiacas de los ratones machos adultos. 
 
