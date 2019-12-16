@@ -9,13 +9,13 @@ Santiago, 16.12.2019
 ---------------------------------------------
 # Introducción
 
-El concepto de expresión diferencial hace alusión al cambio en la expresión de genes que es explicado por, ya sea, factores ambientales-experimentales o genéticos, o dada la interación de ambos factores, o sea cuando hay expresión diferencial, es que hubo interacción genético ambiental (figura 1), permitiendo entender la variación fenotípica que pueda tener el modelo de estudio. Gracias a las aplicaciones bioinformáticas, es que podemos estudiar los cambios de expresión, permitiéndonos clasificar los genes en vías de señalización particulares y por lo tanto entregarnos un panorama de los proocesos que se vean alterados bajo los distintos escenarios experimentales a los que estén inmersos nuestro modelo de estudio.
+El concepto de expresión diferencial hace alusión al cambio en la expresión de genes que es explicado por, ya sea, factores ambientales-experimentales o genéticos, o dada la interacción de ambos factores, o sea cuando hay expresión diferencial, es que hubo interacción genético ambiental (figura 1), permitiendo entender la variación fenotípica que pueda tener el modelo de estudio. Gracias a las aplicaciones bioinformáticas, es que podemos estudiar los cambios de expresión, permitiéndonos clasificar los genes en vías de señalización particulares y por lo tanto entregarnos un panorama de los procesos que se vean alterados bajo los distintos escenarios experimentales a los que estén inmersos nuestro modelo de estudio.
 
 ![1](Expresión+diferencial+de+genes+frente+a+dos+tratamientos.jpg)
 
 **Figura 1**. Esquema representativo de expresión diferencial.
 
-Para este módulo se ha realizado el tutorial de **[Expresión Diferencial](https://github.com/AliciaMstt/BioinfinvRepro/blob/master/Unidad7/Tutorial_de_expresion_diferencial_en_R.md)** del Módulo 7 el cual tenía por objetivo introducir técnicas de el análisis de datos de microarreglos para detectar genes diferencialmente expresados producto de factores experimentales o de sus interacciones. Se generaron figuras para describir control de calidad de las sondas y para describir el análsis de expresión diferencial mismo. El análisis ha sido ejecutado en el servidor remoto de la universidad bajo el lenguaje de programación UNIX y R.  
+Para este módulo se ha realizado el tutorial de **[Expresión Diferencial](https://github.com/AliciaMstt/BioinfinvRepro/blob/master/Unidad7/Tutorial_de_expresion_diferencial_en_R.md)** del Módulo 7 el cual tenía por objetivo introducir técnicas del análisis de datos de microarreglos para detectar genes diferencialmente expresados producto de factores experimentales o de sus interacciones. Se generaron figuras para describir control de calidad de las sondas y para describir el análsis de expresión diferencial mismo. El análisis ha sido ejecutado en el servidor remoto de la universidad bajo el lenguaje de programación UNIX y R.  
 
 ----------------------------------------------------
 # Desarrollo
@@ -44,7 +44,7 @@ table(annot$ProbeQuality)
         Bad        Good    Good****    No match     Perfect  Perfect*** Perfect**** 
         289          60          15           5        4468          53         110 
 
-Por lo tanto se agruparon las sondas "Bad" con "No match" y lo demás como "Good probes". Son malas sondas porque hace match con secuencias repetidas, regiones intergénicas o intrónicas, o es poco problable que entregue una señal sensiblle y específica para cualquier trancrito al ser alineados contra el genoma de referencia (Barbosa-Morais et al. 2010). 
+Por lo tanto se agruparon las sondas "Bad" con "No match" y lo demás como "Good probes". Son malas sondas porque hacen match con secuencias repetidas, regiones intergénicas o intrónicas, o es poco problable que entregue una señal sensiblle y específica para cualquier trancrito al ser alineados contra el genoma de referencia (Barbosa-Morais et al. 2010). 
 
 ```probe_qc <- ifelse(annot$ProbeQuality %in% c("Bad", "No match"), "Bad probes","Good probes")```
 
@@ -222,7 +222,13 @@ Estos hallazgos proponen posibles mecanismos que expliquen cómo el cromosoma Y 
 
 Los análisis de expresión diferencial corresponden a estudios clave para entender el perfil de expresión génica, permitiendo describir el impacto de agentes ambientales-experimentales, el genotipo, además de la interacción de estos dos, en definir el fenotipo. Para lograr esto es importante seguir una serie análsis bioinformáticos que involucra la lectura de los datos brutos, el control de calidad de sondas y su filtrado, para así realizar la prueba de expresión diferencial con un diseño fatorial (importante es definir una matriz de contraste). Finalmente se cuentan los genes expresados diferencialmente y el análsis de procesos biológicos enrriquecidos. 
 
-Estos análsis me permitieron determinar que si hubo expresión diferencial entre genotipo y entre tratamientos, además de efectos de interacción dados por los dos factores antes mencionados, y que los genes clasificados por la interacción estaban enrriquecidos con vías de señalización mayoritariamente enfocadas a procesos neuronales. 
+Estos análsis me permitieron determinar que si hubo expresión diferencial entre genotipo y entre tratamientos, además de efectos de interacción dados por los dos factores antes mencionados, y que los genes clasificados por la interacción estaban enrriquecidos con vías de señalización mayoritariamente enfocadas a procesos neuronales.
+
+Bibliografía
+
+Llamas B., Verdugo RA, Churchill GA, Deschepper CF. Chromosome Y variants from different inbred mouse strains are linked to differences in the morphologic and molecular responses of cardiac cells to postpubertal testosterone. BMC Genomics. 2009;10(150):1–11
+
+Barbosa-Morais, N., J. Dunning, M., Samarajiwa, S., J. Darot, J., E. Ritchie, M., G. Lynch, A., Tavaré, S. A re-annotation pipeline for Illumina BeadArrays: improving the interpretation of gene expression data. Nucleic Acids Research. 2010; 3(38): 17.
 
 
 
