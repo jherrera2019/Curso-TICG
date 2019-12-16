@@ -44,13 +44,13 @@ Se crearon gráficos de caja coloreados por calidad de la sonda y calidad por tr
 
 ![A](A.png)
 
-**Figura A**. Diagramas de caja de datos sin procesar en escala log por microarreglo y calidad de sonda. 
+**Figura 1**. Diagramas de caja de datos sin procesar en escala log por microarreglo y calidad de sonda. 
 
 En la figura A tenemos en el eje X las sondas divididas por calidad para cada array, en donde las de mala calidad tienen menor intensidad (rojo).
 
 ![B](B.png)
 
-**FIgura B**. Diagramas de caja de datos en bruto por microarreglo.
+**FIgura 2**. Diagramas de caja de datos en bruto por microarreglo.
 
 En la figura B tenemos en el eje X, la posición de las matrices Illumina desde la A a H, mientras que en el eje Y el logaritmo en base 2 de la intensidad.  Las cajas están coloreadas según tratamiento. Se puede observar que hay una leve tendencia a mayores valores de intensidad en posiciones de castrados.
 
@@ -122,3 +122,7 @@ attr(,"class")
 [1] "VennCounts"
 
 ```
+
+Figura 3. Genes Diferencialemente expresados (DE) por efectos marginales y de interacción.
+
+Figura 4. Genes DE por efectos de interacción, divididos por tratamiento (izquierda) y genotipo (derecha) .
