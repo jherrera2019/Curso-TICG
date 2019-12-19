@@ -208,21 +208,19 @@ Probaremos si existe enriquecimiento de términos GO utilizando una prueba exact
 
 Este output nos indica que las vías metabólicas enrriquecidas más relevantes son la neurogénesis, regulación de la fosforilación, proceso cofactor metabólico, regulación postiva de modificaciones postraduccionales y generación de neuronas. El perfil de enrriquecimento nos orienta a poner foco al estudio de procesos neuronales.
 
-Llamas et al. (2009) reportaron un aumento en el tamaño de los cardiomiocitos en ratones machos adultos de genotipo B comparado con BY como resultado de la ausencia de los efectos hipertróficos de la testoterona post-pubertal tras la castración en células de la cepa BY. Sin embargo, al hacer el perfil genético encontraron que la falta de efecto hipertrófico no podía ser explicada en base a una insensibilidad de las células de BY a los andrógenos, puesto que, al igual que en nuestro análisis, el efecto de la castración (disminución de los niveles de testosterona) afectó la expresión de más genes en los cardiomiocitos de la cepa BY que en la cepa B, lo que indica que sÍ hay una respuesta frente al estímulo testosterona.
+Llamas et al. (2009) reportaron un aumento en el tamaño de los cardiomiocitos en ratones machos adultos de genotipo B comparado con BY como resultado de la ausencia de los efectos hipertróficos de la testoterona post-pubertal tras la castración en células de la cepa BY. Sin embargo, al hacer el perfil genético encontraron que la falta de efecto hipertrófico no podía ser explicada en base a una insensibilidad de las células de BY a los andrógenos, puesto que, al igual que en nuestro análisis, el efecto de la castración (disminución de los niveles de testosterona) afectó la expresión de más genes en los cardiomiocitos de la cepa BY que en la cepa B, lo que indica que sÍ hay una respuesta al estímulo testosterona.
 
 ![3](Imagen_discu.png)
 
 **Figura 7**. Efecto de la castración en la expresión y fenotipo de los cardiomiocitos en ratas adultas.
 
-Estos hallazgos proponen posibles mecanismos que expliquen cómo el cromosoma Y puede, a través de la interacción con eventos reguladores de andrógenos, estar relacionado con el fenotipo de las células cardiacas de los ratones machos adultos. 
-
 ---------------------------------------------
 
 # Conclusión
 
-Los análisis de expresión diferencial corresponden a estudios clave para entender el perfil de expresión génica, permitiendo describir el impacto de agentes ambientales-experimentales, el genotipo, además de la interacción de estos dos, en definir el fenotipo. Para lograr esto es importante seguir una serie análsis bioinformáticos que involucra la lectura de los datos brutos, el control de calidad de sondas y su filtrado, para así realizar la prueba de expresión diferencial con un diseño fatorial (importante es definir una matriz de contraste). Finalmente se cuentan los genes expresados diferencialmente y el análsis de procesos biológicos enrriquecidos. 
+Los análisis de expresión diferencial corresponden a estudios clave para entender el impacto de agentes ambientales-experimentales, el genotipo, además de la interacción de estos dos, en la modulación de la expresión génicay en cómo puede definir un cambio en el fenotipo. Para lograr esto es importante seguir una serie análsis bioinformáticos que involucran la lectura de los datos brutos, el control de calidad de sondas y su filtrado, para así realizar la prueba de expresión diferencial con un diseño fatorial (importante es definir una matriz de contraste). Finalmente se cuentan los genes expresados diferencialmente y el análisis de procesos biológicos enrriquecidos. 
 
-Estos análsis me permitieron determinar que si hubo expresión diferencial entre genotipo y entre tratamientos, además de efectos de interacción dados por los dos factores antes mencionados, y que los genes clasificados por la interacción estaban enrriquecidos con vías de señalización mayoritariamente enfocadas a procesos neuronales.
+Estos análsis me permitieron determinar que si hubo expresión diferencial entre genotipo y entre tratamientos, además de efectos de interacción dados por los dos factores antes mencionados, y que los genes clasificados por la interacción estaban enrriquecidos con vías de señalización mayoritariamente enfocadas a procesos neuronales. Además, nos permite delinear posbiles mecanismos por los cuales el cromosoma Y, en interacción con eventos reguladores de andrógenos, puede estar relacionado con el fenotipo de los cardiomiocitos de ratones machos adultos.
 
 Bibliografía
 
